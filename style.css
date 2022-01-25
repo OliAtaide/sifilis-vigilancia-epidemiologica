@@ -1,0 +1,40 @@
+:root {
+    --color1: #707070;
+    --color2: #9E9E9E;
+    --color3: #4B4B4B;
+    --color4: #F2F2F2;
+}
+
+body {
+    background-color: var(--color4);
+    font-size: 1em;
+    color: var(--color3);
+}
+
+
+
+.form-control {
+    border: 1px solid var(--color3);
+}
+
+.form-label,
+.card-title,
+.card-subtitle {
+    font-weight: bold;
+}
+
+form .card-title {
+    font-size: 24px;
+}
+
+.navbar,
+.footer {
+    background-color: var(--color2);
+    font-weight: bold;
+    height: 60px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}

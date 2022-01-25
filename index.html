@@ -11,46 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<style>
-    :root {
-        --color1: #707070;
-        --color2: #9E9E9E;
-        --color3: #4B4B4B;
-        --color4: #F2F2F2;
-    }
-
-    body {
-        background-color: var(--color4);
-        font-size: 1em;
-    }
-
-    .card {
-        color: var(--color3);
-    }
-
-    .form-control {
-        border: 1px solid var(--color3);
-    }
-
-    .form-label,
-    .card-title,
-    .card-subtitle {
-        font-weight: bold;
-    }
-
-    .card-title {
-        font-size: 24px;
-    }
-
-        {}
-
-    .navbar {
-        background-color: var(--color2);
-        font-weight: bold;
-    }
-</style>
 
 <body>
     <nav class="navbar">
@@ -64,7 +26,7 @@
         </h4>
         <div class="card my-3">
             <div class="card-body">
-                <h5 class="card-title">Definição de caso:</h5>
+                <div class="card-title">Definição de caso:</div>
                 <div class="card-text">
                     <b>Situação 1</b> - Todo recém-nascido, natimorto ou aborto de mulher com sífilis (a) não tratada ou
                     tratada de forma não adequada (b, c).
@@ -139,468 +101,1079 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <div class="dados-gerais">
-                    <div class="alert border">
-                        <span class="text-danger">*</span> Este marcador indica campos de preenchimento obrigatório.
+                <form action="">
+                    <div class="dados-gerais">
+                        <div class="alert border">
+                            <span class="text-danger">*</span> Este marcador indica campos de preenchimento obrigatório.
+                        </div>
+                        <div class="card-title my-3">DADOS GERAIS</div>
+                        <div class="row row-cols-1 row-cols-sm-3">
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Tipo de Notificação</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Tipo de Notificação" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Agravo/doença</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Agravo/doença" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Código (CID10)</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="A50.9" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Data de Notificação</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="date" placeholder="Tipo de Notificação" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">UF</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <select placeholder="" name="UF" class="form-control form-select" id="">
+                                        <option value="">Selecione a UF</option>
+                                        <option value="0">RN</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Municipio de Notificação</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Nome do Municipio" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Código (IBGE)</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Unidade de Saúde ou fonte notificadora</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Unidade de saúde ou fonte notificadora"
+                                        class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Código (CNES)</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Data do Diagnóstico</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="date" placeholder="Data do Diagnóstico" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-title my-3">DADOS GERAIS</div>
-                    <div class="row row-cols-1 row-cols-sm-3">
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Tipo de Notificação</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Tipo de Notificação" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Agravo/doença</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Agravo/doença" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Código (CID10)</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="A50.9" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Data de Notificação</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="date" placeholder="Tipo de Notificação" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">UF</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione a UF</option>
-                                    <option value="0">RN</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Municipio de Notificação</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Nome do Municipio" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Código (IBGE)</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Unidade de Saúde ou fonte notificadora</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Unidade de saúde ou fonte notificadora"
-                                    class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Código (CNES)</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Data do Diagnóstico</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="date" placeholder="Data do Diagnóstico" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="notificacao-individual">
-                    <div class="card-title my-3">NOTIFICAÇÃO INDIVIDUAL</div>
-                    <div class="row row-cols-1 row-cols-sm-3">
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Nome do Paciente</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Nome do Paciente" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Data de Nascimento</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="date" placeholder="Data de Nascimento" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">(ou) Idade</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="number" placeholder="Idade" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Sexo</label>
-                            <div class="d-flex justify-content-between">
-                                <div class="form-check">
-                                    <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input"
-                                        aria-describedby="basic-addon3">
-                                    <label class="form-check-label" for="Sexo">
-                                        Feminino
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input"
-                                        aria-describedby="basic-addon3">
-                                    <label class="form-check-label" for="Sexo">
-                                        Masculino
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input"
-                                        aria-describedby="basic-addon3">
-                                    <label class="form-check-label" for="Sexo">
-                                        Ignorado
-                                    </label>
+                    <div class="notificacao-individual">
+                        <div class="card-title my-3">NOTIFICAÇÃO INDIVIDUAL</div>
+                        <div class="row row-cols-1 row-cols-sm-3">
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Nome do Paciente</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Nome do Paciente" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Raça</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione</option>
-                                    <option value="0">1- Branca</option>
-                                    <option value="1">2 - Preta</option>
-                                    <option value="2">3 - Amarela</option>
-                                    <option value="3">4 - Parda</option>
-                                    <option value="4">5 - Indígena</option>
-                                    <option value="5">6 - Ignorado</option>
-                                </select>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Data de Nascimento</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="date" placeholder="Data de Nascimento" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Escolaridade</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione</option>
-                                    <option value="0">1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º grau)
-                                    </option>
-                                    <option value="1">2 - 4ª série completa do EF (antigo primário ou 1º grau)</option>
-                                    <option value="2">3 - 5ª à 8ª série incompleta do EF (antigo ginásio ou 1º grau)
-                                    </option>
-                                    <option value="3">4 - Ensino fundamental completo (antigo ginásio ou 1º grau)
-                                    </option>
-                                    <option value="4">5 - Ensino médio incompleto (antigo colegial ou 2º grau)</option>
-                                    <option value="5">6 - Ensino médio completo (antigo colegial ou 2º grau)</option>
-                                    <option value="2">7 - Educação superior incompleta</option>
-                                    <option value="3">8 - Educação superior completa</option>
-                                    <option value="4">9 - Ignorado</option>
-                                    <option value="5">10 - Não se aplica</option>
-                                </select>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">(ou) Idade</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="number" placeholder="Idade" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Número do Cartão SUS</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Número do Cartão SUS" class="form-control"
-                                    id="basic-url" aria-describedby="basic-addon3">
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Sexo</label>
+                                <div class="d-flex justify-content-between">
+                                    <div class="form-check">
+                                        <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input"
+                                            aria-describedby="basic-addon3">
+                                        <label class="form-check-label" for="Sexo">
+                                            Feminino
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input"
+                                            aria-describedby="basic-addon3">
+                                        <label class="form-check-label" for="Sexo">
+                                            Masculino
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input"
+                                            aria-describedby="basic-addon3">
+                                        <label class="form-check-label" for="Sexo">
+                                            Ignorado
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Nome da Mãe</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Nome da Mãe" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Raça</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <select placeholder="" name="UF" class="form-control form-select" id="">
+                                        <option value="">Selecione</option>
+                                        <option value="0">1- Branca</option>
+                                        <option value="1">2 - Preta</option>
+                                        <option value="2">3 - Amarela</option>
+                                        <option value="3">4 - Parda</option>
+                                        <option value="4">5 - Indígena</option>
+                                        <option value="5">6 - Ignorado</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Escolaridade</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <select placeholder="" name="UF" class="form-control form-select" id="">
+                                        <option value="">Selecione</option>
+                                        <option value="0">1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º
+                                            grau)
+                                        </option>
+                                        <option value="1">2 - 4ª série completa do EF (antigo primário ou 1º grau)
+                                        </option>
+                                        <option value="2">3 - 5ª à 8ª série incompleta do EF (antigo ginásio ou 1º grau)
+                                        </option>
+                                        <option value="3">4 - Ensino fundamental completo (antigo ginásio ou 1º grau)
+                                        </option>
+                                        <option value="4">5 - Ensino médio incompleto (antigo colegial ou 2º grau)
+                                        </option>
+                                        <option value="5">6 - Ensino médio completo (antigo colegial ou 2º grau)
+                                        </option>
+                                        <option value="2">7 - Educação superior incompleta</option>
+                                        <option value="3">8 - Educação superior completa</option>
+                                        <option value="4">9 - Ignorado</option>
+                                        <option value="5">10 - Não se aplica</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Número do Cartão SUS</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Número do Cartão SUS" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Nome da Mãe</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Nome da Mãe" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
 
-                    </div>
-                </div>
-                <div class="dados-residencia">
-                    <div class="card-title my-3">DADOS DE RESIDÊNCIA</div>
-                    <div class="row row-cols-1 row-cols-sm-3">
-                        <div class="col">
-                            <label for="basic-url" class="form-label">UF</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">RN</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Municipio de Residência</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Municipio de Residência" class="form-control"
-                                    id="basic-url" aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Código (IBGE)</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Distrito</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Nome do distrito" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Logradouro</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Nome do logradouro" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Código</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Número</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="number" placeholder="Número" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Bairro</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Nome do bairro" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Complemento (apto, casa, etc.)</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Complemento do endereço" class="form-control"
-                                    id="basic-url" aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Geo campo 1</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="number" placeholder="Número" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Geo campo 2</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="number" placeholder="Número" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Ponto de Referência</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="number" placeholder="Ponto de Referência" class="form-control"
-                                    id="basic-url" aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">CEP</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="number" placeholder="Número do CEP" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">(DDD) Telefone</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="(DDD) 99999-9999" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Zona</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione</option>
-                                    <option value="">1 - Urbana</option>
-                                    <option value="">2 - Rural</option>
-                                    <option value="">3 - Periurbana</option>
-                                    <option value="">9 - Ignorado</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Reside no Brasil</label>
-                            <div class="d-flex justify-content-between">
-                                <div class="form-check">
-                                    <input type="radio" name="resideNoBrasil" class="form-check-input"
-                                        aria-describedby="basic-addon3">
-                                    <label class="form-check-label" for="Sexo">
-                                        Sim
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" name="resideNoBrasil" class="form-check-input"
-                                        aria-describedby="basic-addon3">
-                                    <label class="form-check-label" for="Sexo">
-                                        Não
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <label for="basic-url" class="form-label">País (se reside fora do Brasil)</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="dados-complementares">
-                    <div class="card-title my-3">DADOS COMPLEMENTARES</div>
-                    <div class="card-subtitle">ANTECEDENTES EPIDEMIOLÓGICOS DA GESTANTE/MÃE:</div>
-
-                    <div class="row row-cols-1 row-cols-sm-3">
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Idade da Mãe</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Idade da Mãe (anos)" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Cor ou Raça</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione</option>
-                                    <option value="0">1- Branca</option>
-                                    <option value="1">2 - Preta</option>
-                                    <option value="2">3 - Amarela</option>
-                                    <option value="3">4 - Parda</option>
-                                    <option value="4">5 - Indígena</option>
-                                    <option value="5">6 - Ignorado</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Ocupação</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Ocupação" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Escolaridade</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione</option>
-                                    <option value="0">1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º grau)
-                                    </option>
-                                    <option value="1">2 - 4ª série completa do EF (antigo primário ou 1º grau)</option>
-                                    <option value="2">3 - 5ª à 8ª série incompleta do EF (antigo ginásio ou 1º grau)
-                                    </option>
-                                    <option value="3">4 - Ensino fundamental completo (antigo ginásio ou 1º grau)
-                                    </option>
-                                    <option value="4">5 - Ensino médio incompleto (antigo colegial ou 2º grau)</option>
-                                    <option value="5">6 - Ensino médio completo (antigo colegial ou 2º grau)</option>
-                                    <option value="6">7 - Educação superior incompleta</option>
-                                    <option value="7">8 - Educação superior completa</option>
-                                    <option value="8">9 - Ignorado</option>
-                                    <option value="9">10 - Não se aplica</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Realizou Pré-Natal nesta gestação</label>
-                            <div class="d-flex justify-content-between">
-                                <div class="form-check">
-                                    <input type="radio" name="PreNatal" placeholder="Idade" class="form-check-input"
-                                        aria-describedby="basic-addon3">
-                                    <label class="form-check-label" for="PreNatal">
-                                        Sim
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" name="PreNatal" placeholder="Idade" class="form-check-input"
-                                        aria-describedby="basic-addon3">
-                                    <label class="form-check-label" for="PreNatal">
-                                        Não
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" name="PreNatal" placeholder="Idade" class="form-check-input"
-                                        aria-describedby="basic-addon3">
-                                    <label class="form-check-label" for="PreNatal">
-                                        Ignorado
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">UF</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione a UF</option>
-                                    <option value="0">RN</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Município de Residência</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Nome do município" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Código (IBGE)</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Unidade de Saúde ou fonte notificadora</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="Unidade de saúde ou fonte notificadora"
-                                    class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Código (CNES)</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
-                                    aria-describedby="basic-addon3">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="basic-url" class="form-label">Diagnóstico de sífilis materna</label>
-                            <div class="input-group input-group-sm mb-3">
-                                <select placeholder="" name="UF" class="form-control form-select" id="">
-                                    <option value="">Selecione</option>
-                                    <option value="0">1 - Durante o pré-natal</option>
-                                    <option value="1">2 - No momento do parto/curetagem</option>
-                                    <option value="2">3 - Após o parto</option>
-                                    <option value="3">4 - Não realizado</option>
-                                    <option value="9">9 - Ignorado</option>
-                                </select>
-                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="dados-residencia">
+                        <div class="card-title my-3">DADOS DE RESIDÊNCIA</div>
+                        <div class="row row-cols-1 row-cols-sm-3">
+                            <div class="col">
+                                <label for="basic-url" class="form-label">UF</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <select placeholder="" name="UF" class="form-control form-select" id="">
+                                        <option value="">RN</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Municipio de Residência</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Municipio de Residência" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Código (IBGE)</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Distrito</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Nome do distrito" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Logradouro</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Nome do logradouro" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Código</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Número</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="number" placeholder="Número" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Bairro</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Nome do bairro" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Complemento (apto, casa, etc.)</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Complemento do endereço" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Geo campo 1</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="number" placeholder="Número" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Geo campo 2</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="number" placeholder="Número" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Ponto de Referência</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="number" placeholder="Ponto de Referência" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">CEP</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="number" placeholder="Número do CEP" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">(DDD) Telefone</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="(DDD) 99999-9999" class="form-control"
+                                        id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Zona</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <select placeholder="" name="UF" class="form-control form-select" id="">
+                                        <option value="">Selecione</option>
+                                        <option value="">1 - Urbana</option>
+                                        <option value="">2 - Rural</option>
+                                        <option value="">3 - Periurbana</option>
+                                        <option value="">9 - Ignorado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="basic-url" class="form-label">Reside no Brasil</label>
+                                <div class="d-flex justify-content-between">
+                                    <div class="form-check">
+                                        <input type="radio" name="resideNoBrasil" class="form-check-input"
+                                            aria-describedby="basic-addon3">
+                                        <label class="form-check-label" for="Sexo">
+                                            Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="resideNoBrasil" class="form-check-input"
+                                            aria-describedby="basic-addon3">
+                                        <label class="form-check-label" for="Sexo">
+                                            Não
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="basic-url" class="form-label">País (se reside fora do Brasil)</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <select placeholder="" name="UF" class="form-control form-select" id="">
+                                        <option value="">Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="dados-complementares">
+                        <div class="card-title my-3">DADOS COMPLEMENTARES</div>
+                        <div class="antecendentes-epidemiologicos">
+                            <div class="card-subtitle my-3">ANTECEDENTES EPIDEMIOLÓGICOS DA GESTANTE/MÃE:</div>
+
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Idade da Mãe</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Idade da Mãe (anos)" class="form-control"
+                                            id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Cor ou Raça</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="0">1- Branca</option>
+                                            <option value="1">2 - Preta</option>
+                                            <option value="2">3 - Amarela</option>
+                                            <option value="3">4 - Parda</option>
+                                            <option value="4">5 - Indígena</option>
+                                            <option value="5">6 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Ocupação</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Ocupação" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Escolaridade</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="0">1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º
+                                                grau)
+                                            </option>
+                                            <option value="1">2 - 4ª série completa do EF (antigo primário ou 1º grau)
+                                            </option>
+                                            <option value="2">3 - 5ª à 8ª série incompleta do EF (antigo ginásio ou 1º
+                                                grau)
+                                            </option>
+                                            <option value="3">4 - Ensino fundamental completo (antigo ginásio ou 1º
+                                                grau)
+                                            </option>
+                                            <option value="4">5 - Ensino médio incompleto (antigo colegial ou 2º grau)
+                                            </option>
+                                            <option value="5">6 - Ensino médio completo (antigo colegial ou 2º grau)
+                                            </option>
+                                            <option value="6">7 - Educação superior incompleta</option>
+                                            <option value="7">8 - Educação superior completa</option>
+                                            <option value="8">9 - Ignorado</option>
+                                            <option value="9">10 - Não se aplica</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Realizou Pré-Natal nesta gestação</label>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <input type="radio" name="PreNatal" placeholder="Idade"
+                                                class="form-check-input" aria-describedby="basic-addon3">
+                                            <label class="form-check-label" for="PreNatal">
+                                                Sim
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="PreNatal" placeholder="Idade"
+                                                class="form-check-input" aria-describedby="basic-addon3">
+                                            <label class="form-check-label" for="PreNatal">
+                                                Não
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="PreNatal" placeholder="Idade"
+                                                class="form-check-input" aria-describedby="basic-addon3">
+                                            <label class="form-check-label" for="PreNatal">
+                                                Ignorado
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">UF</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione a UF</option>
+                                            <option value="0">RN</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Município de Residência</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Nome do município" class="form-control"
+                                            id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Código (IBGE)</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Unidade de Saúde ou fonte
+                                        notificadora</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Unidade de saúde ou fonte notificadora"
+                                            class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Código (CNES)</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Diagnóstico de sífilis materna</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="0">1 - Durante o pré-natal</option>
+                                            <option value="1">2 - No momento do parto/curetagem</option>
+                                            <option value="2">3 - Após o parto</option>
+                                            <option value="3">4 - Não realizado</option>
+                                            <option value="9">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dados-laboratoriais">
+                            <div class="card-subtitle my-3">DADOS LABORATORIAIS DA GESTANTE/MÃE</div>
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Teste não treponêmico no
+                                        parto/curetagem</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Reagente</option>
+                                            <option value="">2 - Não reagente</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Título</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Data</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="date" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Teste treponêmico no
+                                        parto/curetagem</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Reagente</option>
+                                            <option value="">2 - Não reagente</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tratemento-gestante">
+                            <div class="card-subtitle my-3">TRATAMENTO DA GESTANTE/MÃE</div>
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Esquema de tratamento</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 -Adequado</option>
+                                            <option value="">2 - Inadequado</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Data do Início do Tratamento</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="date" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Reside no Brasil</label>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <input type="radio" name="parceirosTratados" class="form-check-input"
+                                                aria-describedby="basic-addon3">
+                                            <label class="form-check-label" for="Sexo">
+                                                Sim
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="parceirosTratados" class="form-check-input"
+                                                aria-describedby="basic-addon3">
+                                            <label class="form-check-label" for="Sexo">
+                                                Não
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="parceirosTratados" class="form-check-input"
+                                                aria-describedby="basic-addon3">
+                                            <label class="form-check-label" for="Sexo">
+                                                Ignorado
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="antecedentes-epidemiologicos">
+                            <div class="card-subtitle my-3">
+                                ANTECEDENTES EPIDEMIOLÓGICOS DA CRIANÇA
+                            </div>
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">UF</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione a UF</option>
+                                            <option value="0">RN</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Município de
+                                        nascimento/aborto/natimorto</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Nome do Municipio" class="form-control"
+                                            id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Código (IBGE)</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Local de Nascimento
+                                        (Maternidade/Hospital)</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Nome da maternidade/hospital"
+                                            class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Código</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="XXXXXX" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dados-laboratorio">
+                            <div class="card-subtitle my-3">
+                                DADOS DO LABORATÓRIO DA CRIANÇA
+                            </div>
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Teste não treponêmico - Sangue
+                                        Periférico</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Reagente</option>
+                                            <option value="">2 - Não reagente</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Título</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Data</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="date" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Teste treponêmico (após 18 meses)</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Reagente</option>
+                                            <option value="">2 - Não reagente</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Data</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="date" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Teste não treponêmico - Líquor</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Reagente</option>
+                                            <option value="">2 - Não reagente</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Título</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Data</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="date" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Titulação ascendente</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Sim</option>
+                                            <option value="">2 - Não</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Evidência de Treponema pallidum</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Sim</option>
+                                            <option value="">2 - Não</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Alteração Liquórica</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Sim</option>
+                                            <option value="">2 - Não</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Diagnóstico Radiológico da Criança:
+                                        Alteração do Exame dos
+                                        Ossos Longos</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Sim</option>
+                                            <option value="">2 - Não</option>
+                                            <option value="">3 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dados-clinicos">
+                            <div class="card-subtitle my-3">
+                                DADOS CLÍNICOS DA CRIANÇA
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <label for="basic-url" class="form-label">Diagnóstico Clínico</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Assintomático</option>
+                                            <option value="">2 - Sintomático</option>
+                                            <option value="">3 - Não se aplica</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col col-sm col-sm-8">
+                                    <label for="basic-url" class="form-label">Presença de sinais e sintomas</label>
+                                    <div class="row row-cols-2 row-cols-sm-5">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                    Anemia
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                    Esplenomegalia
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                    Hepatomegalia
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                    Pseudoparalisia
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                    Rinite muco-sanguinolenta
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                    Icterícia
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                    Lesões Cutâneas
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                    Osteocondrite
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col col-4">
+                                            <div class="d-flex">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <label class="form-check-label">
+                                                        Outro:
+                                                    </label>
+                                                </div>
+                                                <input type="text" class="form-control border-0 border-bottom border-dark">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tratamento-crianca">
+                            <div class="card-subtitle my-3">
+                                TRATAMENTO DA CRIANÇA
+                            </div>
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Esquema de tratamento</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Penicilina G cristalina 100.000 a 150.000 Ul/Kg/dia - 10 dias</option>
+                                            <option value="">2 - Penicilina G procaína 50.000 Ul/Kg/dia - 10 dias</option>
+                                            <option value="">3 - Penicilina G benzatina 50.000 Ul/Kg/dia</option>
+                                            <option value="">4 - Outro esquema</option>
+                                            <option value="">5 - Não realizado</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Outro esquema</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Outros esquemas" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="evolucao">
+                            <div class="card-subtitle my-3">
+                                EVOLUÇÃO
+                            </div>
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Evolução do Caso</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <select placeholder="" name="UF" class="form-control form-select" id="">
+                                            <option value="">Selecione</option>
+                                            <option value="">1 - Vivo</option>
+                                            <option value="">2 - Óbito por sífilis congênita</option>
+                                            <option value="">3 - Óbito por outras causas</option>
+                                            <option value="">4 - Aborto</option>
+                                            <option value="">5 - Natimorto</option>
+                                            <option value="">9 - Ignorado</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Data do Óbito</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="date" placeholder="Título" class="form-control" id="basic-url"
+                                            aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="observacoes-adicionais">
+                            <div class="card-subtitle my-3">
+                                OBSERVAÇÕES ADICIONAIS
+                            </div>
+                            <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                        <div class="investigador">
+                            <div class="card-subtitle my-3">
+                                INVESTIGADOR
+                            </div>
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Município/Unidade de Saúde</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Nome do município ou unidade de saúde" class="form-control"
+                                            id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Código da Unidade de Saúde</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="XXXXXX" class="form-control"
+                                            id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Nome</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Nome" class="form-control"
+                                            id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Função</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Função" class="form-control"
+                                            id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="basic-url" class="form-label">Assinatura</label>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text" placeholder="Assinatura" class="form-control"
+                                            id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
+        <div class="card my-3">
+            <div class="card-body">
+                <div class="card-title">
+                    Observações para preenchimento:
+                </div>
+                <div class="card-text">
+                    <p>
+                        <b>7</b> - Anotar a data do diagnóstico ou da evidência laboratorial e/ou clínica da doença de
+                        acordo com a
+                        definição de caso vigente no momento da notificação.
+                    </p>
+                    <p>
+                        <b>10</b> - Idade: anotar a idade somente se a data de nascimento for desconhecida. Em caso de
+                        Aborto
+                        será
+                        colocado 00 e 1-Hora.
+                    </p>
+                    <p>
+                        <b>43 e 53</b> - FTA-Abs (Teste de anticorpos treponêmicos fluorescentes com absorção), MHA-TP
+                        (Ensaio
+                        de
+                        microhemaglutinação), TPHA (Ensaio de
+                        hemaglutinação para Treponema pallidum), ELISA (Ensaio imunossorvente ligado à enzima), teste
+                        imunológico com revelação quimioluminescente e
+                        suas derivações, TPPA (Ensaio de a glutinação passiva de partículas par a Treponema pallidum), e
+                        testes rápidos treponêmicos: indicados para o
+                        diagnóstico da sífilis em gestantes e crianças maiores de 18 meses. O teste rápido,
+                        especialmente no
+                        momento do parto, é indicado como preferencial,
+                        de acordo com o Protocolo Clínico e Diretrizes Terapêuticas para a Prevenção da Transmissão
+                        Vertical
+                        de HIV, Sífilis e Hepatites Virais.
+                    </p>
+                    <p>
+                        <b>44</b> - Esquema de Tratamento da mãe:
+                        <br>
+                        <b><u>
+                                Esquema de Tratamento Adequado:
+                            </u></b>
+                        <br>
+                        É todo tratamento completo para estágio clínico da sífilis com penicilina benzatina, INICIADO
+                        até 30
+                        dias antes do parto. Gestantes que não se
+                        enquadrem nesses critérios serão consideradas como tratadas de forma não adequada.
+                        <br>
+                        <b><u>
+                                Esquema de Tratamento Inadequado:
+                            </u></b>
+                        <br>
+                        É todo tratamento feito com qualquer medicamento que não a penicilina; ou· tratamento
+                        incompleto,
+                        mesmo tendo sido feito com penicilina; ou
+                        tratamento não adequado ao estágio clínico da sífilis; ou tratamendo iniciado com menos de 30
+                        dias
+                        antes do parto.
+                    </p>
+                    <p>
+                        <b>53</b> - Refere-se ao resultado do teste treponêmico realizado após os 18 meses de idade da
+                        criança.
+                        Informar - Não se aplica - quando a idade da
+                        criança for menor que 18 meses. Resultados reagentes em testes realizados em amostras de criança
+                        com
+                        idade inferior a 18 meses devem ser sempre
+                        analisados juntamente com os resultados
+                        dos testes executados em amostra da mãe, pois é necessário considerar a possibilidade de
+                        transferência de anticorpos IgG maternos ao feto.
+                    </p>
+                    <p>
+                        <b>58</b> - Titulação ascendente - Refere-se à comparação dos títulos da sorologia não
+                        treponêmica da
+                        criança após cada teste realizado durante o esquema
+                        de seguimento ( VDRL com 1 mês, 3, 6 ,12 e 18 meses).
+                    </p>
+                    <p>
+                        <b>59</b> - Evidência de T. pallidum - Detecção do Treponema pallidum por meio de exames diretos
+                        por
+                        microscopia (de campo escuro ou com material
+                        corado) em amostra de secreção nasal ou lesão cutânea, biópsia ou necrópsia de criança, aborto
+                        ou
+                        natimorto.
+                    </p>
+                    <p>
+                        <b>60</b> - Alteração liquórica - Informar detecção de alterações na celularidade e/ou proteínas
+                        ou
+                        outra
+                        alteração específica no líquor da criança;
+                    </p>
+                    <p>
+                        <b>63</b> - Em relação ao tratamento da criança com sífilis congênita consultar o Protocolo
+                        Clínico e
+                        Diretrizes Terapêuticas para Prevenção da Transmissão
+                        Vertical de HIV, Sífilis e Hepatites Virais.
+                    </p>
+                    <p>
+                        <b>65</b> - Informar a evolução do caso de sífilis congênita:
+                        <br>
+                        Considera-se óbito por sífilis congênita - o caso de morte do recém-nato, após o nascimento com
+                        vida, filho de mãe com sífilis não tratada ou tratada
+                        inadequadamente.
+                        <br>
+                        Considera-se <b>Aborto</b> - toda perda gestacional, até 20 semanas de gestação ou com peso
+                        menor ou
+                        igual
+                        a 500 gramas.
+                        <br>
+                        Considera-se <b>Natimorto</b> - todo feto morto, após 20 semanas de gestação ou com peso maior
+                        que 500
+                        gramas.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
     </div>
+    <footer>
+        <div class="footer"></div>
+    </footer>
 </body>
 
 </html>
