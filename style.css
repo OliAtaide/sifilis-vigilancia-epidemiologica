@@ -8,19 +8,24 @@
 body {
     background-color: var(--color4);
     font-size: 1em;
-    color: var(--color3);
 }
 
-
-
 .form-control {
-    border: 1px solid var(--color3);
+    border: 1px solid var(--color1);
 }
 
 .form-label,
 .card-title,
 .card-subtitle {
     font-weight: bold;
+}
+
+.card-text, .card-title, .card-subtitle{
+    color: var(--color3);
+}
+
+.form-label{
+    color: var(--color1);
 }
 
 form .card-title {
@@ -37,4 +42,21 @@ form .card-title {
 textarea {
     resize: none;
     height: 100px;
+}
+
+input[type="date"]{
+    padding:  0 0 0 0.25rem !important;
+}
+
+input[type="date"]::-webkit-datetime-edit{
+    padding: .25rem .5rem;
+    /* content: attr(placeholder); */
+    opacity: 0.5;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    border-left: 1px solid black;
+    margin: 0;
+    padding: 0.25rem;
+    cursor: pointer;
 }
