@@ -11,12 +11,17 @@ var uf = [
     'RN', 'RS', 'SC', 'SP', 'SE', 'TO'
 ]
 
-console.log($("select[name='UF']"));
-
 uf.forEach(e => {
     $("select[name='UF']").append(
         "<option value='" +
         e + "'>" + e + "</option>"
     )
 });
+
+$('select').on('change', function () {
+    // if($(this).val() != ''){
+        // console.log($(this).val())
+    $(this).addClass('selected');
+    // }
+})
 // <option value="">Selecione a UF</option>
