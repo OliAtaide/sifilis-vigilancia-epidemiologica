@@ -24,4 +24,10 @@ $('select').on('change', function () {
     $(this).addClass('selected');
     // }
 })
+
+$('input[type="date"]').on('change', function () {
+    console.log($(this).val());
+    $(this).addClass('selected');
+})
+
 // <option value="">Selecione a UF</option>

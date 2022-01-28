@@ -46,12 +46,12 @@ textarea {
 
 input[type="date"] {
     padding: 0 0 0 0.25rem !important;
+    color: var(--color2);
 }
 
 input[type="date"]::-webkit-datetime-edit {
     padding: .25rem .5rem;
     /* content: attr(placeholder); */
-    opacity: 0.5;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -71,9 +71,14 @@ option{
 }
 
 input::placeholder, select{
-    color: var(--color1) !important;
+    color: var(--color2) !important;
 }
 
 .selected{
     color: var(--color3) !important;
+}
+
+input[type="date"]::before { 
+    content: attr('00/00/0000');
+    width: 100%;
 }
