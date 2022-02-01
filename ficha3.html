@@ -30,7 +30,7 @@
             <div class="card-body">
                 <form action="">
                     <div class="dados-gerais">
-                        <div class="card-title my-3">DADOS GERAIS</div>
+                        <div class="card-title mb-4">DADOS GERAIS</div>
                         <div class="row row-cols-1 row-cols-sm-3">
                             <div class="col">
                                 <label class="form-label">Tipo de Notificação</label>
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <label class="form-label">Código (CID10)</label>
+                                <label class="form-label cod-label">Código (CID10)</label>
                                 <div class="input-group input-group-sm mb-3">
                                     <input type="text" placeholder="A50.9" class="form-control">
                                 </div>
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <label class="form-label">Código (IBGE)</label>
+                                <label class="form-label cod-label">Código (IBGE)</label>
                                 <div class="input-group input-group-sm mb-3">
                                     <input type="text" placeholder="XXXXXX" class="form-control">
                                 </div>
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <label class="form-label">Código (CNES)</label>
+                                <label class="form-label cod-label">Código (CNES)</label>
                                 <div class="input-group input-group-sm mb-3">
                                     <input type="text" placeholder="XXXXXX" class="form-control">
                                 </div>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="notificacao-individual">
-                        <div class="card-title my-3">NOTIFICAÇÃO INDIVIDUAL</div>
+                        <div class="card-title mt-2 mb-4">NOTIFICAÇÃO INDIVIDUAL</div>
                         <div class="row row-cols-1 row-cols-sm-3">
                             <div class="col">
                                 <label class="form-label">Nome do Paciente</label>
@@ -122,23 +122,46 @@
                                 <label class="form-label">Sexo</label>
                                 <div class="d-flex justify-content-between">
                                     <div class="form-check">
-                                        <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input">
+                                        <input type="radio" name="Sexo" value="F" class="form-check-input">
                                         <label class="form-check-label">
                                             Feminino
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input">
+                                        <input type="radio" name="Sexo" value="M" class="form-check-input">
                                         <label class="form-check-label">
                                             Masculino
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="radio" name="Sexo" placeholder="Idade" class="form-check-input">
+                                        <input type="radio" name="Sexo" value="I" class="form-check-input">
                                         <label class="form-check-label">
                                             Ignorado
                                         </label>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col gestante">
+                                <label class="form-label">Gestante</label>
+                                <div class="d-flex justify-content-between">
+                                    <div class="form-check">
+                                        <input type="radio" name="Gestante" value="S" class="form-check-input">
+                                        <label class="form-check-label">
+                                            Sim
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="Gestante" value="N" class="form-check-input">
+                                        <label class="form-check-label">
+                                            Não
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col idade-gestacional">
+                                <label class="form-label cod-label">Idade Gestacional</label>
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" placeholder="Idade gestacional" class="form-control">
                                 </div>
                             </div>
                             <div class="col">
@@ -196,7 +219,7 @@
                         </div>
                     </div>
                     <div class="dados-residencia">
-                        <div class="card-title my-3">DADOS DE RESIDÊNCIA</div>
+                        <div class="card-title mt-2 mb-4">DADOS DE RESIDÊNCIA</div>
                         <div class="row row-cols-1 row-cols-sm-3">
                             <div class="col">
                                 <label class="form-label">UF</label>
@@ -213,7 +236,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <label class="form-label">Código (IBGE)</label>
+                                <label class="form-label cod-label">Código (IBGE)</label>
                                 <div class="input-group input-group-sm mb-3">
                                     <input type="text" placeholder="XXXXXX" class="form-control">
                                 </div>
@@ -237,7 +260,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <label class="form-label">Código</label>
+                                <label class="form-label cod-label">Código</label>
                                 <div class="input-group input-group-sm mb-3">
                                     <input type="text" placeholder="XXXXXX" class="form-control">
                                 </div>
@@ -307,7 +330,7 @@
                         </div>
                     </div>
                     <div class="conclusao">
-                        <div class="card-title">CONCLUSÃO</div>
+                        <div class="card-title mt-2 mb-4">CONCLUSÃO</div>
                         <div class="row">
                             <div class="row row-cols-1 row-cols-sm-3">
                                 <div class="col">
@@ -321,15 +344,13 @@
                                     <label class="form-label">Classificação Final</label>
                                     <div class="d-flex justify-content-between">
                                         <div class="form-check">
-                                            <input type="radio" name="class-final" placeholder="Idade"
-                                                class="form-check-input">
+                                            <input type="radio" name="class-final" class="form-check-input">
                                             <label class="form-check-label">
                                                 Confirmado
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" name="class-final" placeholder="Idade"
-                                                class="form-check-input">
+                                            <input type="radio" name="class-final" class="form-check-input">
                                             <label class="form-check-label">
                                                 Descartado
                                             </label>
@@ -340,15 +361,13 @@
                                     <label class="form-label">Critério de Confirmação/Descarte</label>
                                     <div class="d-flex justify-content-between">
                                         <div class="form-check">
-                                            <input type="radio" name="criterio" placeholder="Idade"
-                                                class="form-check-input">
+                                            <input type="radio" name="criterio" class="form-check-input">
                                             <label class="form-check-label">
                                                 Laboratorial
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" name="criterio" placeholder="Idade"
-                                                class="form-check-input">
+                                            <input type="radio" name="criterio" class="form-check-input">
                                             <label class="form-check-label">
                                                 Clínico-Epidemiológico
                                             </label>
@@ -359,7 +378,7 @@
                         </div>
                     </div>
                     <div class="fonte-infeccao">
-                        <div class="card-title">LOCAL PROVÁVEL DA FONTE DE INFECÇÃO</div>
+                        <div class="card-title mt-2 mb-4">LOCAL PROVÁVEL DA FONTE DE INFECÇÃO</div>
                         <div class="row">
                             <div class="row row-cols-1 row-cols-sm-3">
                                 <div class="col">
@@ -367,22 +386,19 @@
                                         residência?</label>
                                     <div class="d-flex justify-content-between">
                                         <div class="form-check">
-                                            <input type="radio" name="aucoctone" placeholder="Idade"
-                                                class="form-check-input">
+                                            <input type="radio" name="aucoctone" class="form-check-input">
                                             <label class="form-check-label">
                                                 Sim
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" name="aucoctone" placeholder="Idade"
-                                                class="form-check-input">
+                                            <input type="radio" name="aucoctone" class="form-check-input">
                                             <label class="form-check-label">
                                                 Não
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" name="aucoctone" placeholder="Idade"
-                                                class="form-check-input">
+                                            <input type="radio" name="aucoctone" class="form-check-input">
                                             <label class="form-check-label">
                                                 Indeterminado
                                             </label>
@@ -412,7 +428,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <label class="form-label">Código (IBGE)</label>
+                                    <label class="form-label cod-label">Código (IBGE)</label>
                                     <div class="input-group input-group-sm mb-3">
                                         <input type="text" placeholder="XXXXXX" class="form-control">
                                     </div>
@@ -474,7 +490,7 @@
                         </div>
                     </div>
                     <div class="dados-complementares">
-                        <div class="card-title">INFORMAÇÕES COMPLEMENTARES E OBSERVAÇÕES</div>
+                        <div class="card-title mt-2 mb-4">INFORMAÇÕES COMPLEMENTARES E OBSERVAÇÕES</div>
                         <div class="observacoes-adicionais">
                             <div class="card-subtitle my-3">
                                 OBSERVAÇÕES ADICIONAIS
@@ -487,32 +503,32 @@
                             </div>
                             <div class="row row-cols-1 row-cols-sm-3">
                                 <div class="col">
-                                    <label class="form-label">Nome</label>
+                                    <label class="form-label u-label">Nome</label>
                                     <div class="input-group input-group-sm mb-3">
                                         <input type="text" placeholder="Nome" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <label class="form-label">Função</label>
+                                    <label class="form-label u-label">Função</label>
                                     <div class="input-group input-group-sm mb-3">
                                         <input type="text" placeholder="Função" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <label class="form-label">Assinatura</label>
+                                    <label class="form-label u-label">Assinatura</label>
                                     <div class="input-group input-group-sm mb-3">
                                         <input type="text" placeholder="Assinatura" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <label class="form-label">Município/Unidade de Saúde</label>
+                                    <label class="form-label u-label">Município/Unidade de Saúde</label>
                                     <div class="input-group input-group-sm mb-3">
                                         <input type="text" placeholder="Nome do município ou unidade de saúde"
                                             class="form-control">
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <label class="form-label">Código da Unidade de Saúde</label>
+                                    <label class="form-label u-label">Código da Unidade de Saúde</label>
                                     <div class="input-group input-group-sm mb-3">
                                         <input type="text" placeholder="XXXXXX" class="form-control">
                                     </div>

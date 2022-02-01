@@ -1,8 +1,32 @@
-var labels = $('.form-label').toArray();
+var i = 0;
 
-for (let i = 0; i < labels.length; i++) {
-    labels[i].prepend(i + 1 + ". ");
-}
+$('.form-label').not('.u-label').each(function (index) {
+    if(!$(this).hasClass('cod-label')){
+        i++;
+    }
+    $(this).prepend(i + ". ");
+})
+
+$('.gestante').hide();
+$('.idade-gestacional').hide();
+
+$('input[name="Sexo"]').change(function () {
+    if(this.value == 'F'){
+        $('.gestante').show();
+    }
+    else{
+        $('.gestante').hide();
+    }
+})
+
+$('input[name="Gestante"]').change(function () {
+    if(this.value == 'S'){
+        $('.idade-gestacional').show();
+    }
+    else{
+        $('.idade-gestacional').hide();
+    }
+})
 
 var uf = [
     'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF',
@@ -19,15 +43,10 @@ uf.forEach(e => {
 });
 
 $('select').on('change', function () {
-    // if($(this).val() != ''){
-        // console.log($(this).val())
     $(this).addClass('selected');
-    // }
 })
 
 $('input[type="date"]').on('change', function () {
     console.log($(this).val());
     $(this).addClass('selected');
 })
-
-// <option value="">Selecione a UF</option>
