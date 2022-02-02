@@ -1,6 +1,20 @@
 var i = 0;
 
-console.log(explicacoes[0])
+var u_exp = [
+    "Informar o nome completo do responsável por esta investigação. ex: Mário José da Silva",
+    "Informar a função do responsável por esta investigação. ex: Enfermeiro",
+    "Registrar a assinatura do responsável por esta investigação.",
+    "Informar o nome do município/unidade de saúde responsável por esta investigação.",
+    "Informar o código da unidade de saúde responsável por esta investigação.",
+]
+
+$('.u-label').each(function (index) {
+    $(this).append(
+        `<a tabindex="0" class="btn py-0" role="button" data-bs-toggle="popover"
+        data-bs-trigger="focus" data-bs-placement="top" 
+        data-bs-content="` + u_exp[i++] + `">?</a>`
+    )
+})
 
 function imprimirDetalhes(exp) {
     $('.form-label').not('.u-label').each(function (index) {
