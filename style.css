@@ -32,11 +32,19 @@ form .card-title {
     font-size: 18px;
 }
 
-.navbar,
+.header,
 .footer {
     background-color: var(--color2);
     font-weight: bold;
+}
+
+.header{
     height: 60px;
+}
+
+.subheader{
+    font-weight: bold;
+    background-color: var(--color1);
 }
 
 textarea {
