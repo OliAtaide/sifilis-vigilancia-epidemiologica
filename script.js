@@ -8,16 +8,8 @@ var u_exp = [
     "Informar o código da unidade de saúde responsável por esta investigação.",
 ]
 
-$('.u-label').each(function (index) {
-    $(this).append(
-        `<a tabindex="0" class="btn py-0" role="button" data-bs-toggle="popover"
-        data-bs-trigger="focus" data-bs-placement="top" 
-        data-bs-content="` + u_exp[i++] + `">?</a>`
-    )
-})
-
 function imprimirDetalhes(exp) {
-    $('.form-label').not('.u-label').each(function (index) {
+    $('.form-label').not('.u-label').each(function () {
         if (!$(this).hasClass('cod-label')) {
             i++;
         }
@@ -26,6 +18,13 @@ function imprimirDetalhes(exp) {
             `<a tabindex="0" class="btn py-0" role="button" data-bs-toggle="popover"
             data-bs-trigger="focus" data-bs-placement="top" 
             data-bs-content="` + exp[i - 1] + `">?</a>`
+        )
+    })
+    $('.u-label').each(function (index) {
+        $(this).append(
+            `<a tabindex="0" class="btn py-0" role="button" data-bs-toggle="popover"
+            data-bs-trigger="focus" data-bs-placement="top" 
+            data-bs-content="` + u_exp[index] + `">?</a>`
         )
     })
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
