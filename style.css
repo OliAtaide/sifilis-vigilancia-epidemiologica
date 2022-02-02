@@ -51,7 +51,6 @@ input[type="date"] {
 
 input[type="date"]::-webkit-datetime-edit {
     padding: .25rem .5rem;
-    /* content: attr(placeholder); */
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -82,13 +81,3 @@ input[type="date"]::before {
     content: attr('00/00/0000');
     width: 100%;
 }
-
-/* .n{
-    width: 10% !important;
-    position: absolute;
-    right: 0;
-}
-
-.container{
-    position: relative !important;
-} */

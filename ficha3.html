@@ -47,7 +47,13 @@
                             <div class="col">
                                 <label class="form-label">Tipo de Notificação</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="text" placeholder="Tipo de Notificação" class="form-control">
+                                    <select name="tipo-notificacao" class="form-control form-select" >
+                                        <option value="" hidden>Selecione o tipo de notificação</option>
+                                        <option value="1">1 - Negativa</option>
+                                        <option value="2">2 - Individual</option>
+                                        <option value="3">3 - Surto</option>
+                                        <option value="9">9 - Tracoma</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col">
@@ -71,7 +77,7 @@
                             <div class="col">
                                 <label class="form-label">UF</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="UF" class="form-control form-select" id="">
+                                    <select name="UF" class="form-control form-select" >
                                         <option value="" hidden>Selecione a UF</option>
                                     </select>
                                 </div>
@@ -179,7 +185,7 @@
                             <div class="col">
                                 <label class="form-label">Cor ou Raça</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="raca" class="form-control form-select" id="">
+                                    <select name="raca" class="form-control form-select" >
                                         <option value="" hidden>Selecione</option>
                                         <option value="0">1- Branca</option>
                                         <option value="1">2 - Preta</option>
@@ -193,7 +199,7 @@
                             <div class="col">
                                 <label class="form-label">Escolaridade</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="UF" class="form-control form-select" id="">
+                                    <select name="UF" class="form-control form-select" >
                                         <option value="" hidden>selecione</option>
                                         <option value="0">1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º
                                             grau)
@@ -236,7 +242,7 @@
                             <div class="col">
                                 <label class="form-label">UF</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="UF" class="form-control form-select" id="">
+                                    <select name="UF" class="form-control form-select" >
                                         <option value="" hidden>Selecione a UF</option>
                                     </select>
                                 </div>
@@ -322,7 +328,7 @@
                             <div class="col">
                                 <label class="form-label">Zona</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="zona" class="form-control form-select" id="">
+                                    <select name="zona" class="form-control form-select" >
                                         <option value="" hidden>Selecione</option>
                                         <option value="">1 - Urbana</option>
                                         <option value="">2 - Rural</option>
@@ -334,7 +340,7 @@
                             <div class="col">
                                 <label class="form-label">País (se reside fora do Brasil)</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="UF" class="form-control form-select" id="">
+                                    <select name="UF" class="form-control form-select" >
                                         <option value="" hidden>selecione</option>
                                     </select>
                                 </div>
@@ -420,7 +426,7 @@
                                 <div class="col">
                                     <label class="form-label">UF</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="UF" class="form-control form-select" id="">
+                                        <select name="UF" class="form-control form-select" >
                                             <option value="" hidden>Selecione a UF</option>
                                         </select>
                                     </div>
@@ -428,7 +434,7 @@
                                 <div class="col">
                                     <label class="form-label">País</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="pais" class="form-control form-select" id="">
+                                        <select name="pais" class="form-control form-select" >
                                             <option value="" hidden>Selecione o país</option>
                                         </select>
                                     </div>
@@ -477,7 +483,7 @@
                                 <div class="col">
                                     <label class="form-label">Evolução do Caso</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="Zona" class="form-control form-select" id="">
+                                        <select name="Zona" class="form-control form-select" >
                                             <option value="" hidden>Selecione a evolução do caso</option>
                                             <option value="">1 - Cura</option>
                                             <option value="">2 - Óbito pelo agravo notificado </option>
@@ -507,7 +513,7 @@
                             <div class="card-subtitle my-3">
                                 OBSERVAÇÕES ADICIONAIS
                             </div>
-                            <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                            <textarea name=""  cols="30" rows="10" class="form-control"></textarea>
                         </div>
                         <div class="investigador">
                             <div class="card-subtitle my-3">
@@ -558,5 +564,119 @@
 </body>
 
 <script src="script.js"></script>
+
+<script>
+    var exp = [
+        `Preencher com o código correspondente ao tipo de notificação:
+        <ul>
+            <li>
+                [ 1 ] Negativa: não ocorrência de casos de doenças de notificação compulsória na semana epidemiológica;
+            </li>
+            <li>
+                [ 2 ] Individual: notificação de caso;
+            </li>
+            <li>
+                [ 3 ] Surto: ocorrência de casos agregados de surto conforme norma técnica;
+            </li>
+            <li>
+                [ 4 ] Tracoma: ocorrência de casos agregados de Tracoma. <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.   
+            </li>
+        </ul>`,
+        `Nome do agravo/doença ou código correspondente estabelecido pelo SINAN (CID 10) que está sendo
+        Notificado. <b>CAMPO CHAVE</b>.`,
+        "Anotar a data da notificação: data de preenchimento da ficha de notificação. <b>CAMPO CHAVE</b>.",
+        `Anotar a sigla da Unidade Federada da notificação individual ou do local de ocorrência do surto, se
+        notificação de surto (ex. DF). <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.`,
+        `Preencher com o nome completo do município (ou código correspondente segundo cadastro do IBGE)
+        onde está localizada a unidade de saúde (ou outra fonte notificadora) que realizou a notificação <b>CAMPO CHAVE</b>.`,
+        `Preencher com o nome completo (ou código correspondente segundo cadastro do SINAN) da unidade de
+        saúde (ou outra fonte notificadora) que realizou a notificação <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.`,
+        "Anotar a data em que surgiram os primeiros sintomas no paciente. <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.",
+        "Preencher com o nome completo do paciente (sem abreviações) <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.",
+        "Preencher com a data de nascimento do paciente (dia/mês/ano) de forma completa. <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.",
+        `Anotar a idade do paciente somente se a data de nascimento for desconhecida (Ex. 20 dias = 20 D; 3
+        meses = 3 M; 26 anos = 26 A). Se o paciente não souber informar sua idade, anotar a idade aparente. <br/>
+        OBS: Se a data de nascimento não for preenchida, a idade será <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.`,
+        `Preencher segundo a categoria referente ao sexo do paciente (M = masculino, F = feminino e I =
+        ignorado). <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.`,
+        `Em caso de a paciente ser do sexo feminino, preencher o período gestacional em que a paciente se
+        encontra no momento da ocorrência do agravo (1º trimestre da 1ª a 12 ª semana; 2º trimestre da 13 ª a 26 ª
+        semana e 3º trimestre a partir da 27ª semana de gestação) . Caso a idade seja menor que 7 anos, o sistema
+        preencherá automaticamente a opção 10 = Não se aplica. <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>, quando sexo= F.`,
+        `Preencher com o código correspondente à cor ou raça declarada pela pessoa: 1) Branca; 2) Preta; 3)
+        Amarela (compreendo-se nesta categoria a pessoa que se declarou de raça amarela); 4) Parda (incluindose
+        nesta categoria a pessoa que se declarou mulata, cabocla, cafuza, mameluca ou mestiça de preto com
+        pessoa de outra cor ou raça); 5) Indígena (considerando-se nesta categoria a pessoa que se declarou
+        indígena ou índia). <b>CAMPO ESSENCIAL</b>.`,
+        `Preencher com o código correspondente ao número de anos de estudo concluídos. A classificação é
+        obtida em função da série e do grau que a pessoa está freqüentando ou freqüentou. Este campo não se
+        aplica para paciente com idade inferior a 7 anos. <b>CAMPO ESSENCIAL</b>.`,
+        "Preencher com o número do CARTÃO ÚNICO do Sistema Único de Saúde - SUS",
+        "Preencher com o nome completo da mãe do paciente (sem abreviações) <b>CAMPO ESSENCIAL</b>",
+        `Anotar a sigla da Unidade Federada da residência do paciente, se notificação individual ou do local de
+        ocorrência do surto, se notificação de surto (ex. DF) <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>, quando residente no Brasil.`,
+        `Anotar o nome do município (ou código correspondente segundo cadastro do IBGE) da residência do
+        paciente ou do local de ocorrência do surto, se notificação de surto. CAMPO DE PREENCHIMENTO
+        OBRIGATÓRIO, quando UF é digitada.`,
+        "Anotar o nome do distrito de residência do paciente. <b>CAMPO ESSENCIAL</b>.",
+        `Anotar o nome do bairro (ou código correspondente segundo cadastro do SINAN) de residência do
+        paciente ou do local de ocorrência do surto, se notificação de surto. <b>CAMPO ESSENCIAL</b>.`,
+        `Anotar o tipo (avenida, rua, travessa, etc) e nome completo ou código correspondente do logradouro da
+        residência do paciente, se notificação individual ou do local de ocorrência do surto, se notificação de
+        surto (Ex. Av. Duque de Caxias). Se o paciente for indígena anotar o nome da aldeia. <b>CAMPO ESSENCIAL</b>.`,
+        `Anotar o número do logradouro da residência do paciente, se notificação individual ou do local de
+        ocorrência do surto, se notificação de surto (Ex. n.º 575 ). <b>CAMPO ESSENCIAL</b>.`,
+        "Anotar o complemento do logradouro (ex. Bloco B, apto 402, lote 25, casa 14, etc). <b>CAMPO ESSENCIAL</b>.",
+        `Caso esteja sendo utilizado o georreferenciamento, informar o local que foi adotado para o campo
+        Geocampo1 (ex. Se o município esteja usando o Geocampo1 para informar a <b>quadra ou número</b>, nele
+        deve ser informado o número da <b>quadra ou número</b>).`,
+        "Caso esteja usando georreferenciamento, informar o local que foi adotado para o campo Geocampo2.",
+        `Anotar o ponto de referência para localização da residência do paciente, se notificação individual ou do
+        local de ocorrência do surto, se notificação de surto (Perto da padaria do João). <b>CAMPO ESSENCIAL</b>.`,
+        `Anotar o CEP - código de endereçamento postal do logradouro (avenida, rua, travessa, etc) - da
+        residência do paciente, se notificação individual ou do local de ocorrência do surto, se notificação de
+        surto (Ex. CEP :70.036-030). <b>CAMPO ESSENCIAL</b>.`,
+        "Telefone do paciente, se notificação individual ou do local de ocorrência do surto, se notificação de surto. <b>CAMPO ESSENCIAL</b>.",
+        `Zona de residência do paciente, se notificação individual ou do local de ocorrência do surto, se
+        notificação de surto por ocasião da notificação ( Ex. 1 = área com características estritamente urbanas; 2
+        = área com características estritamente rurais; 3 = área rural com aglomeração populacional que se
+        assemelha à uma área urbana). <b>CAMPO ESSENCIAL</b>.`,
+        "Anotar o nome do país de residência quando o paciente notificado residir em outro país. <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.",
+        "Informar a data de investigação. <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.",
+        "Informar a classificação final. <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>, quando o campo 43 estiver preenchido.",
+        `Informar o critério de confirmação ou de descarte. <b>CAMPO ESSENCIAL</b>.
+        Preencher campos relacionados ao Local Provável de Infecção somente se caso foi confirmado.`,
+        `Informar se o caso é autóctone do município de residência
+        <br/>
+        (1=sim, 2=não ou 3=indeterminado)
+        <b>PREENCHIMENTO OBRIGATÓRIO</b>
+        <br/>
+        <u>se caso confirmado</u>.
+        <br/>
+        Se caso confirmado for autóctone do município de residência, o Sinan preencherá automaticamente os
+        demais campos do Local Provável de Infecção com os dados da residência do paciente. Se a autoctonia
+        for indeterminada, não preencher os campos do Local Provável de Infecção`,
+        `Informar a sigla da unidade federada correspondente ao local provável de infecção.
+         <b>PREENCHIMENTO OBRIGATÓRIO</b> 
+         <u>se caso foi confirmado, infectado no Brasil, mas não é autóctone do município de residência</u>.`,
+        `Informar o nome do país correspondente ao local provável de infecção.
+        <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>
+        <u>se caso foi confirmado, infectado no Brasil ou no exterior, mas não é autóctone do município de residência</u>.`,
+        `Informar o nome do município provável de infecção ou seu código correspondente ao cadastro do IBGE.
+        <b>PREENCHIMENTO OBRIGATÓRIO</b>
+        <u>se caso foi confirmado, infectado no Brasil, mas não é autóctone do município de residência</u>.`,
+        `Informar o nome do distrito correspondente ao local provável de infecção se caso confirmado e infectado
+        no Brasil, mas não é autóctone do município de residência. <b>CAMPO ESSENCIAL</b>.`,
+        `Informar o nome do bairro correspondente ao local provável de infecção se caso confirmado e infectado
+        no Brasil, mas não é autóctone do município de residência. <b>CAMPO ESSENCIAL</b>.`,
+        "Informar se é doença é relacionada ao trabalho (1=sim, 2=não ou 3=indeterminado). <b>CAMPO ESSENCIAL</b>.",
+        "Informar evolução do caso. <b>CAMPO ESSENCIAL</b>.",
+        "Informar a data do óbito.",
+        `Informar a data de encerramento. <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>, quando o
+        campo 32 estiver preenchido.`
+    ]
+
+    imprimirDetalhes(exp);
+</script>
 
 </html>
