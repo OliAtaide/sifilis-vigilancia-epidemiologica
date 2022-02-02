@@ -35,7 +35,14 @@
             <div class="col-sm">
                 <div class="n input-group w-auto mb-3">
                     <span class="input-group-text border-end-0 border-dark bg-white">Nº</span>
-                    <input value="" disabled type="text" class="form-control border-start-0 bg-white">
+                    <input value="" type="text" class="form-control border-start-0 border-end-0 bg-white">
+                    <span class="input-group-text border-start-0 border-dark bg-white">
+                        <a tabindex="0" class="btn p-0 input-group-text" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+                            data-bs-content="Anotar o número da notificação atribuído pela unidade de saúde para identificação do caso. 
+                            <b>CAMPO DE PREENCHIMENTO OBRIGATÓRIO</b>.">
+                            ?
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
@@ -149,7 +156,7 @@
                             <div class="col">
                                 <label class="form-label">UF</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="UF" class="form-control form-select" >
+                                    <select name="UF" class="form-control form-select">
                                         <option value="" hidden>Selecione a UF</option>
                                     </select>
                                 </div>
@@ -257,7 +264,7 @@
                             <div class="col">
                                 <label class="form-label">Cor ou Raça</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="raca" class="form-control form-select" >
+                                    <select name="raca" class="form-control form-select">
                                         <option value="" hidden>selecione</option>
                                         <option value="1">1- Branca</option>
                                         <option value="2">2 - Preta</option>
@@ -271,7 +278,7 @@
                             <div class="col">
                                 <label class="form-label">Escolaridade</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="escolaridade" class="form-control form-select" >
+                                    <select name="escolaridade" class="form-control form-select">
                                         <option value="" hidden>selecione</option>
                                         <option value="1">
                                             1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º grau)
@@ -324,7 +331,7 @@
                             <div class="col">
                                 <label class="form-label">UF</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="UF" class="form-control form-select" >
+                                    <select name="UF" class="form-control form-select">
                                         <option value="" hidden>Selecione a UF</option>
                                     </select>
                                 </div>
@@ -410,7 +417,7 @@
                             <div class="col">
                                 <label class="form-label">Zona</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="Zona" class="form-control form-select" >
+                                    <select name="Zona" class="form-control form-select">
                                         <option value="" hidden>selecione</option>
                                         <option value="">1 - Urbana</option>
                                         <option value="">2 - Rural</option>
@@ -422,7 +429,7 @@
                             <div class="col">
                                 <label class="form-label">País (se reside fora do Brasil)</label>
                                 <div class="input-group input-group-sm mb-3">
-                                    <select name="pais" class="form-control form-select" >
+                                    <select name="pais" class="form-control form-select">
                                         <option value="" hidden>selecione</option>
                                     </select>
                                 </div>
@@ -443,7 +450,7 @@
                                 <div class="col">
                                     <label class="form-label">Cor ou Raça</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="raca" class="form-control form-select" >
+                                        <select name="raca" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1- Branca</option>
                                             <option value="2">2 - Preta</option>
@@ -463,7 +470,7 @@
                                 <div class="col">
                                     <label class="form-label">Escolaridade</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="escolaridade" class="form-control form-select" >
+                                        <select name="escolaridade" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º
                                                 grau)
@@ -513,7 +520,7 @@
                                 <div class="col">
                                     <label class="form-label">UF</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="UF" class="form-control form-select" >
+                                        <select name="UF" class="form-control form-select">
                                             <option value="" hidden>Selecione a UF</option>
                                         </select>
                                     </div>
@@ -547,7 +554,7 @@
                                 <div class="col">
                                     <label class="form-label">Diagnóstico de sífilis materna</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="sifilis-materna" class="form-control form-select" >
+                                        <select name="sifilis-materna" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Durante o pré-natal</option>
                                             <option value="2">2 - No momento do parto/curetagem</option>
@@ -566,7 +573,7 @@
                                     <label class="form-label">Teste não treponêmico no
                                         parto/curetagem</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="UF" class="form-control form-select" >
+                                        <select name="UF" class="form-control form-select">
                                             <option value="" hidden>Selecione a UF</option>
                                             <option value="1">1 - Reagente</option>
                                             <option value="2">2 - Não reagente</option>
@@ -591,7 +598,7 @@
                                     <label class="form-label">Teste treponêmico no
                                         parto/curetagem</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="teste-treponemico" class="form-control form-select" >
+                                        <select name="teste-treponemico" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Reagente</option>
                                             <option value="2">2 - Não reagente</option>
@@ -608,7 +615,7 @@
                                 <div class="col">
                                     <label class="form-label">Esquema de tratamento</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="esquema-tratamento" class="form-control form-select" >
+                                        <select name="esquema-tratamento" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="">1 -Adequado</option>
                                             <option value="">2 - Inadequado</option>
@@ -657,7 +664,7 @@
                                 <div class="col">
                                     <label class="form-label">UF</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="UF" class="form-control form-select" >
+                                        <select name="UF" class="form-control form-select">
                                             <option value="" hidden>Selecione a UF</option>
                                         </select>
                                     </div>
@@ -701,7 +708,7 @@
                                     <label class="form-label">Teste não treponêmico - Sangue
                                         Periférico</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="nao-treponemico" class="form-control form-select" >
+                                        <select name="nao-treponemico" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Reagente</option>
                                             <option value="2">2 - Não reagente</option>
@@ -725,7 +732,7 @@
                                 <div class="col">
                                     <label class="form-label">Teste treponêmico (após 18 meses)</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="teste-treponemico" class="form-control form-select" >
+                                        <select name="teste-treponemico" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Reagente</option>
                                             <option value="2">2 - Não reagente</option>
@@ -744,7 +751,7 @@
                                 <div class="col">
                                     <label class="form-label">Teste não treponêmico - Líquor</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="teste-nao-treponemico" class="form-control form-select" >
+                                        <select name="teste-nao-treponemico" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Reagente</option>
                                             <option value="2">2 - Não reagente</option>
@@ -768,7 +775,7 @@
                                 <div class="col">
                                     <label class="form-label">Titulação ascendente</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="titulacao-ascendente" class="form-control form-select" >
+                                        <select name="titulacao-ascendente" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Sim</option>
                                             <option value="2">2 - Não</option>
@@ -780,7 +787,7 @@
                                 <div class="col">
                                     <label class="form-label">Evidência de Treponema pallidum</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="treponema-pallidum" class="form-control form-select" >
+                                        <select name="treponema-pallidum" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Sim</option>
                                             <option value="2">2 - Não</option>
@@ -792,7 +799,7 @@
                                 <div class="col">
                                     <label class="form-label">Alteração Liquórica</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="alteracao-liquorica" class="form-control form-select" >
+                                        <select name="alteracao-liquorica" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Sim</option>
                                             <option value="2">2 - Não</option>
@@ -806,7 +813,7 @@
                                         Alteração do Exame dos
                                         Ossos Longos</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="ossos-longos" class="form-control form-select" >
+                                        <select name="ossos-longos" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Sim</option>
                                             <option value="2">2 - Não</option>
@@ -825,7 +832,7 @@
                                 <div class="col-sm">
                                     <label class="form-label">Diagnóstico Clínico</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="diagnostico-clinico" class="form-control form-select" >
+                                        <select name="diagnostico-clinico" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Assintomático</option>
                                             <option value="2">2 - Sintomático</option>
@@ -925,7 +932,7 @@
                                 <div class="col">
                                     <label class="form-label">Esquema de tratamento</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="esquema-tratamento" class="form-control form-select" >
+                                        <select name="esquema-tratamento" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Penicilina G cristalina 100.000 a 150.000 Ul/Kg/dia -
                                                 10 dias</option>
@@ -954,7 +961,7 @@
                                 <div class="col">
                                     <label class="form-label">Evolução do Caso</label>
                                     <div class="input-group input-group-sm mb-3">
-                                        <select name="evolucao-caso" class="form-control form-select" >
+                                        <select name="evolucao-caso" class="form-control form-select">
                                             <option value="" hidden>selecione</option>
                                             <option value="1">1 - Vivo</option>
                                             <option value="2">2 - Óbito por sífilis congênita</option>
@@ -978,7 +985,7 @@
                             <div class="card-subtitle my-3">
                                 OBSERVAÇÕES ADICIONAIS
                             </div>
-                            <textarea name=""  cols="30" rows="10" class="form-control"></textarea>
+                            <textarea name="" cols="30" rows="10" class="form-control"></textarea>
                         </div>
                         <div class="investigador">
                             <div class="card-subtitle my-3">
